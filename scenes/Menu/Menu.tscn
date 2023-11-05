@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://b61nt8au53glr"]
+
+[ext_resource type="Texture2D" uid="uid://qya8ypafl6le" path="res://assets/background.png" id="1_0yrye"]
+[ext_resource type="FontFile" uid="uid://bv7grx20poa7u" path="res://assets/fonts/endgame/Endgame DEMO.otf" id="1_dpqv6"]
+[ext_resource type="Script" path="res://scenes/Menu/Menu.gd" id="2_hgmp8"]
+
+[sub_resource type="Theme" id="Theme_mvhjm"]
+default_font = ExtResource("1_dpqv6")
+Button/colors/font_color = Color(0.0705882, 0.227451, 0.427451, 1)
+Button/font_sizes/font_size = 12
+Button/fonts/font = ExtResource("1_dpqv6")
+Label/colors/font_color = Color(0.909804, 0.513726, 0.309804, 1)
+Label/colors/font_shadow_color = Color(0.658824, 0.627451, 0.619608, 1)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_mvhjm")
+script = ExtResource("2_hgmp8")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0yrye")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Main" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Main"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Title" type="Label" parent="MarginContainer/Main/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 48
+text = "Bounty Hunter"
+horizontal_alignment = 1
+
+[node name="Start" type="Button" parent="MarginContainer/Main/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Iniciar"
+
+[node name="Exit" type="Button" parent="MarginContainer/Main/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "salir"
+
+[connection signal="pressed" from="MarginContainer/Main/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/Main/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
