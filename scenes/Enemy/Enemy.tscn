@@ -1,0 +1,146 @@
+[gd_scene load_steps=26 format=3 uid="uid://uwq0hd8vwom6"]
+
+[ext_resource type="Script" path="res://scenes/Enemy/Enemy.gd" id="1_88snd"]
+[ext_resource type="Texture2D" uid="uid://bv12sjvxduhii" path="res://assets/sprites/enemy basic attack/Artboard 20.png" id="1_e56v3"]
+[ext_resource type="Texture2D" uid="uid://dv6ua8blo02gk" path="res://assets/sprites/enemy basic Idle/Artboard 1.png" id="1_k2o8b"]
+[ext_resource type="Texture2D" uid="uid://b6j70ufr7gmnv" path="res://assets/sprites/enemy basic attack/Artboard 21.png" id="2_5acbg"]
+[ext_resource type="Texture2D" uid="uid://ck66x58d4f15b" path="res://assets/sprites/enemy basic Idle/Artboard 2.png" id="2_ev6v5"]
+[ext_resource type="Texture2D" uid="uid://c11pwycp62j4e" path="res://assets/sprites/enemy basic Idle/Artboard 3.png" id="3_ll6hx"]
+[ext_resource type="Texture2D" uid="uid://dfyo5asmar6rm" path="res://assets/sprites/enemy basic attack/Artboard 22.png" id="3_v5vrc"]
+[ext_resource type="Texture2D" uid="uid://br5705f3mymy8" path="res://assets/sprites/enemy basic Idle/Artboard 4.png" id="4_8svxm"]
+[ext_resource type="Texture2D" uid="uid://ci3aaj8q38slp" path="res://assets/sprites/enemy basic attack/Artboard 23.png" id="4_vpddu"]
+[ext_resource type="Texture2D" uid="uid://ebnvqynf36wc" path="res://assets/sprites/enemy basic damage/Artboard 11.png" id="6_2mddj"]
+[ext_resource type="Texture2D" uid="uid://oqme7uyhqni7" path="res://assets/sprites/enemy basic damage/Artboard 13.png" id="7_043pl"]
+[ext_resource type="Texture2D" uid="uid://c8iqiigue5q47" path="res://assets/sprites/enemy basic damage/Artboard 12.png" id="8_hyrlk"]
+[ext_resource type="Texture2D" uid="uid://dnwwd21wjvcfk" path="res://assets/sprites/enemy basic run/Artboard 5.png" id="9_hru75"]
+[ext_resource type="Texture2D" uid="uid://b0cd7lp60uc6h" path="res://assets/sprites/enemy basic damage/Artboard 14.png" id="9_rqdfk"]
+[ext_resource type="Texture2D" uid="uid://ub1btnkt3jem" path="res://assets/sprites/enemy basic run/Artboard 6.png" id="10_2cw54"]
+[ext_resource type="Texture2D" uid="uid://cx6pt3caxvak6" path="res://assets/sprites/enemy basic damage/Artboard 15.png" id="10_mdmhd"]
+[ext_resource type="Texture2D" uid="uid://c2rvah3688ywj" path="res://assets/sprites/enemy basic run/Artboard 7.png" id="11_i65rb"]
+[ext_resource type="Texture2D" uid="uid://1w02cd2yy7gi" path="res://assets/sprites/enemy basic damage/Artboard 16.png" id="11_tm3at"]
+[ext_resource type="Texture2D" uid="uid://cvysjmum66re2" path="res://assets/sprites/enemy basic damage/Artboard 17.png" id="12_3763g"]
+[ext_resource type="Texture2D" uid="uid://dw0dlpji2qf5k" path="res://assets/sprites/enemy basic run/Artboard 8.png" id="12_hl1of"]
+[ext_resource type="Texture2D" uid="uid://cexi0abqkparo" path="res://assets/sprites/enemy basic run/Artboard 9.png" id="13_3p6j8"]
+[ext_resource type="Texture2D" uid="uid://ocypmtv4c7hy" path="res://assets/sprites/enemy basic damage/Artboard 18.png" id="13_t7me2"]
+[ext_resource type="Texture2D" uid="uid://daewuc75yl7kc" path="res://assets/sprites/enemy basic run/Artboard 10.png" id="14_ge53m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qxdhg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_e56v3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5acbg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_v5vrc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vpddu")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_2mddj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_043pl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hyrlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2mddj")
+}],
+"loop": false,
+"name": &"Damage",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_2mddj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rqdfk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mdmhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tm3at")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3763g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_t7me2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3763g")
+}],
+"loop": false,
+"name": &"Died",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_k2o8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ev6v5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ll6hx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8svxm")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_hru75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2cw54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_i65rb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_hl1of")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_3p6j8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ge53m")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_udnub"]
+size = Vector2(25, 52)
+
+[node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
+script = ExtResource("1_88snd")
+
+[node name="Body" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qxdhg")
+animation = &"Died"
+autoplay = "Idle"
+flip_h = true
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, 2)
+shape = SubResource("RectangleShape2D_udnub")
+
+[connection signal="animation_finished" from="Body" to="." method="_on_body_animation_finished"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0lf851k5u0sr"
-path="res://.godot/imported/Artboard 5.png-782cfb8249eb53e18bc2c7354cd53096.ctex"
+path="res://.godot/imported/Artboard 5.png-73fea861f891cf01030ca980d5600143.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/neji_1/Artboard 5.png"
-dest_files=["res://.godot/imported/Artboard 5.png-782cfb8249eb53e18bc2c7354cd53096.ctex"]
+source_file="res://assets/sprites/neji_attack_1/Artboard 5.png"
+dest_files=["res://.godot/imported/Artboard 5.png-73fea861f891cf01030ca980d5600143.ctex"]
 
 [params]
 

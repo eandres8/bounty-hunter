@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wv24h23kovm0"
-path="res://.godot/imported/Artboard 2.png-770290e6218ca2bbc79c4a15491fcf20.ctex"
+uid="uid://ck66x58d4f15b"
+path="res://.godot/imported/Artboard 2.png-b5ca33e618e09e401fbded484bfea322.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/neji_1/Artboard 2.png"
-dest_files=["res://.godot/imported/Artboard 2.png-770290e6218ca2bbc79c4a15491fcf20.ctex"]
+source_file="res://assets/sprites/enemy basic Idle/Artboard 2.png"
+dest_files=["res://.godot/imported/Artboard 2.png-b5ca33e618e09e401fbded484bfea322.ctex"]
 
 [params]
 
