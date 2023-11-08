@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dhhshvs5q4cma"]
+
+[ext_resource type="FontFile" uid="uid://bv7grx20poa7u" path="res://assets/fonts/endgame/Endgame DEMO.otf" id="1_0nevw"]
+
+[resource]
+default_font = ExtResource("1_0nevw")
+Button/colors/font_color = Color(0.0705882, 0.227451, 0.427451, 1)
+Button/font_sizes/font_size = 12
+Button/fonts/font = ExtResource("1_0nevw")
+Label/colors/font_color = Color(0.909804, 0.513726, 0.309804, 1)
+Label/colors/font_shadow_color = Color(0.658824, 0.627451, 0.619608, 1)
