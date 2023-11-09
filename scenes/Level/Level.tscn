@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://c2p83lqvbrqtk"]
+[gd_scene load_steps=8 format=3 uid="uid://c2p83lqvbrqtk"]
 
 [ext_resource type="Texture2D" uid="uid://8086a2amnxv6" path="res://assets/tileset.png" id="1_a4kcm"]
 [ext_resource type="AudioStream" uid="uid://b1m8vnibcaad0" path="res://assets/audio/music/exports/space-asteroids.ogg" id="1_hb1oh"]
 [ext_resource type="PackedScene" uid="uid://ctg30vmpd715q" path="res://scenes/Player/Player.tscn" id="3_us51a"]
 [ext_resource type="PackedScene" uid="uid://uwq0hd8vwom6" path="res://scenes/Enemy/Enemy.tscn" id="4_j8wx3"]
+[ext_resource type="PackedScene" uid="uid://6ko213l8njgm" path="res://scenes/GUI/GUI.tscn" id="5_lk8ka"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_epcsg"]
 texture = ExtResource("1_a4kcm")
@@ -539,9 +540,13 @@ layer_0/tile_data = PackedInt32Array(0, 0, 7, 65536, 0, 8, 131072, 0, 9, 196608,
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Settings"]
 stream = ExtResource("1_hb1oh")
+volume_db = -19.676
+autoplay = true
 
 [node name="Player" parent="." instance=ExtResource("3_us51a")]
 position = Vector2(47, 137)
 
 [node name="Enemy" parent="." instance=ExtResource("4_j8wx3")]
 position = Vector2(264, 141)
+
+[node name="GUI" parent="." instance=ExtResource("5_lk8ka")]

@@ -1,7 +1,7 @@
 extends Node
 
 var score = 0
-var credits = 1
+var life = 100
 
 var axis: Vector2
 

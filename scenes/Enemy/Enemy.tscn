@@ -127,20 +127,29 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_udnub"]
-size = Vector2(25, 52)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bqxyw"]
+radius = 12.0
+height = 40.0
 
 [node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
 script = ExtResource("1_88snd")
 
 [node name="Body" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qxdhg")
-animation = &"Died"
+animation = &"Idle"
 autoplay = "Idle"
 flip_h = true
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(-2.5, 2)
-shape = SubResource("RectangleShape2D_udnub")
+position = Vector2(-2, -7)
+shape = SubResource("CapsuleShape2D_bqxyw")
+
+[node name="Left" type="RayCast2D" parent="."]
+target_position = Vector2(-100, 2.08165e-12)
+
+[node name="Right" type="RayCast2D" parent="."]
+target_position = Vector2(100, 2.08165e-12)
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="animation_finished" from="Body" to="." method="_on_body_animation_finished"]

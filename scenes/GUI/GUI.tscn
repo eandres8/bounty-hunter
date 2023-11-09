@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://6ko213l8njgm"]
+
+[ext_resource type="Texture2D" uid="uid://by7g4bce2t2a7" path="res://assets/gui.png" id="1_fofic"]
+[ext_resource type="Script" path="res://scenes/GUI/GUI.gd" id="1_g77jv"]
+[ext_resource type="Texture2D" uid="uid://ddsun1nxkcofa" path="res://assets/health.png" id="3_7bde1"]
+
+[node name="GUI" type="CanvasLayer"]
+script = ExtResource("1_g77jv")
+
+[node name="Control" type="Control" parent="."]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Main" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="TextureRect" type="TextureRect" parent="Control/Main"]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("1_fofic")
+stretch_mode = 2
+
+[node name="Label" type="Label" parent="Control/Main/TextureRect"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 24.0
+offset_top = 14.0
+offset_right = 71.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 10
+text = "0"
+horizontal_alignment = 2
+autowrap_mode = 1
+
+[node name="Health" type="TextureRect" parent="Control/Main/TextureRect"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 32.0
+offset_right = 87.0
+offset_bottom = 10.0
+texture = ExtResource("3_7bde1")
+expand_mode = 1
